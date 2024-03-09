@@ -16,6 +16,9 @@ class MainViewController: UIViewController {
     // ViewModel
     var viewModel: MainViewModel = MainViewModel()
     
+    // Variables
+    var cellDataSource: Books = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +50,14 @@ class MainViewController: UIViewController {
                     self.activityIndicator.stopAnimating()
                 }
             }
+        }
+        
+        viewModel.cellDataSource.bind { [weak self] books in
+            guard let self = self, let books = books else {
+                return
+            }
+            self.cellDataSource = books
+            self.reloadCollectionView()
         }
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 class MainViewModel {
     
     var isLoading: Observable<Bool> = Observable(false)
+    var cellDataSource: Observable<Books> = Observable(nil)
     var dataSource: Books?
     
     func numberOfSection() -> Int {
@@ -17,7 +18,7 @@ class MainViewModel {
     }
     
     func numberOfItems(in section: Int) -> Int {
-        10
+        self.dataSource?.count ?? 0
     }
     
     func getData() {
@@ -28,13 +29,23 @@ class MainViewModel {
         isLoading.value = true
         APIManager.getMyLibrary { [weak self] result in
             self?.isLoading.value = false
+            
             switch result {
             case .success(let data):
-                print("My Library Books: \(data)")
+                print("My Library Books Count: \(data.count)")
                 self?.dataSource = data
+                self?.mapCellData()
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    func mapCellData() {
+        self.cellDataSource.value = self.dataSource ?? []
+    }
+    
+    func getBookTitle(_ book: Book) -> String {
+        return book.title
     }
 }

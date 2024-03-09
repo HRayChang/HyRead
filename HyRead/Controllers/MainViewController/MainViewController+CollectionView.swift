@@ -23,6 +23,12 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
     }
     
+    func reloadCollectionView() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return viewModel.numberOfSection()
     }
@@ -34,7 +40,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
-        let tempText = "Temp Text"
+        let bookData = cellDataSource[indexPath.row]
+        let tempText = self.viewModel.getBookTitle(bookData)
            
            // 創建一個 UILabel
            let label = UILabel(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
