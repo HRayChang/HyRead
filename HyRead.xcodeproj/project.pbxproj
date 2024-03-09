@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		73A30F9C2B9C1D55007F00E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */; };
-		73A30F9E2B9C1D55007F00E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30F9D2B9C1D55007F00E1 /* SceneDelegate.swift */; };
 		73A30FA02B9C1D55007F00E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30F9F2B9C1D55007F00E1 /* ViewController.swift */; };
 		73A30FA32B9C1D55007F00E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A30FA12B9C1D55007F00E1 /* Main.storyboard */; };
 		73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FA42B9C1D55007F00E1 /* HyRead.xcdatamodeld */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		73A30F982B9C1D55007F00E1 /* HyRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73A30F9D2B9C1D55007F00E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		73A30F9F2B9C1D55007F00E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73A30FA22B9C1D55007F00E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73A30FA52B9C1D55007F00E1 /* HyRead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HyRead.xcdatamodel; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */,
-				73A30F9D2B9C1D55007F00E1 /* SceneDelegate.swift */,
 				73A30F9F2B9C1D55007F00E1 /* ViewController.swift */,
 				73A30FA12B9C1D55007F00E1 /* Main.storyboard */,
 				73A30FA72B9C1D57007F00E1 /* Assets.xcassets */,
@@ -144,7 +141,6 @@
 				73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */,
 				73A30FA02B9C1D55007F00E1 /* ViewController.swift in Sources */,
 				73A30F9C2B9C1D55007F00E1 /* AppDelegate.swift in Sources */,
-				73A30F9E2B9C1D55007F00E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +298,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +307,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raychang.HyRead;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,8 +328,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,9 +337,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raychang.HyRead;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
