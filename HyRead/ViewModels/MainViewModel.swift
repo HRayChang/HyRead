@@ -16,4 +16,15 @@ class MainViewModel {
     func numberOfItems(in section: Int) -> Int {
         10
     }
+    
+    func getData() {
+        APIManager.getMyLibrary { result in
+            switch result {
+            case .success(let data):
+                print("My Library Books: \(data)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

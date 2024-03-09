@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Books: Codable {
+struct Book: Codable {
     let uuid: Int
     let title: String
     let coverURL: String
@@ -19,3 +19,5 @@ struct Books: Codable {
         case publishDate, publisher, author
     }
 }
+
+typealias Books = [Book]

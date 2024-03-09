@@ -28,4 +28,8 @@ class MainViewController: UIViewController {
         
         setupCollectionView()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.getData()
+    }
 }
