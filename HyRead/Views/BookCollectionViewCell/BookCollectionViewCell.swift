@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BookCollectionViewCell: UICollectionViewCell {
 
@@ -24,5 +25,6 @@ class BookCollectionViewCell: UICollectionViewCell {
 
     func setupCell(viewModel: BookCollectionCellViewModel) {
         self.titleLabel.text = viewModel.title
+        self.bookImageView.sd_setImage(with: viewModel.coverURL)
     }
 }

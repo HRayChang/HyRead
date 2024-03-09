@@ -10,7 +10,7 @@ import Foundation
 class MainViewModel {
     
     var isLoading: Observable<Bool> = Observable(false)
-    var cellDataSource: Observable<Books> = Observable(nil)
+    var cellDataSource: Observable<[BookCollectionCellViewModel]> = Observable(nil)
     var dataSource: Books?
     
     func numberOfSection() -> Int {
@@ -42,7 +42,7 @@ class MainViewModel {
     }
     
     func mapCellData() {
-        self.cellDataSource.value = self.dataSource ?? []
+        self.cellDataSource.value = self.dataSource?.compactMap({BookCollectionCellViewModel(book: $0)})
     }
     
     func getBookTitle(_ book: Book) -> String {
