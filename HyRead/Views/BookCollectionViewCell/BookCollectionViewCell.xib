@@ -22,7 +22,28 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3r-fx-zX7">
                                 <rect key="frame" x="5" y="10" width="99" height="178"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jMe-5S-sZo">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="133"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDr-k5-vgI">
+                                        <rect key="frame" x="0.0" y="133" width="99" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="jMe-5S-sZo" firstAttribute="top" secondItem="T3r-fx-zX7" secondAttribute="top" id="BHz-mu-0an"/>
+                                    <constraint firstAttribute="trailing" secondItem="gDr-k5-vgI" secondAttribute="trailing" id="CqL-0l-P6n"/>
+                                    <constraint firstAttribute="trailing" secondItem="jMe-5S-sZo" secondAttribute="trailing" id="Qlx-gm-qqc"/>
+                                    <constraint firstItem="gDr-k5-vgI" firstAttribute="top" secondItem="jMe-5S-sZo" secondAttribute="bottom" id="SiG-I8-ZUC"/>
+                                    <constraint firstItem="jMe-5S-sZo" firstAttribute="leading" secondItem="T3r-fx-zX7" secondAttribute="leading" id="U4P-Xx-jzV"/>
+                                    <constraint firstAttribute="bottom" secondItem="gDr-k5-vgI" secondAttribute="bottom" id="bYI-rW-RJB"/>
+                                    <constraint firstAttribute="bottom" secondItem="jMe-5S-sZo" secondAttribute="bottom" constant="45" id="mfS-JE-nQP"/>
+                                    <constraint firstItem="gDr-k5-vgI" firstAttribute="leading" secondItem="T3r-fx-zX7" secondAttribute="leading" id="w6J-hr-jj8"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +66,9 @@
             </constraints>
             <size key="customSize" width="109" height="198"/>
             <connections>
+                <outlet property="bookImageView" destination="jMe-5S-sZo" id="x9w-Dj-cSz"/>
                 <outlet property="containerView" destination="T3r-fx-zX7" id="jxB-Cs-jKz"/>
+                <outlet property="titleLabel" destination="gDr-k5-vgI" id="MSM-2W-vhX"/>
             </connections>
             <point key="canvasLocation" x="183.96946564885496" y="70.422535211267615"/>
         </collectionViewCell>

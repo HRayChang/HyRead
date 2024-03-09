@@ -63,8 +63,8 @@
 		7383FCD62B9CB42200882087 /* BookCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				7383FCDC2B9CB53000882087 /* BookCollectionViewCell.xib */,
 				7383FCE12B9CBBBF00882087 /* BookCollectionViewCell.swift */,
+				7383FCDC2B9CB53000882087 /* BookCollectionViewCell.xib */,
 			);
 			path = BookCollectionViewCell;
 			sourceTree = "<group>";
