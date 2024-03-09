@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7383FCDE2B9CB53000882087 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7383FCDC2B9CB53000882087 /* BookCollectionViewCell.xib */; };
+		7383FCE22B9CBBBF00882087 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCE12B9CBBBF00882087 /* BookCollectionViewCell.swift */; };
 		73A30F9C2B9C1D55007F00E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */; };
 		73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FA42B9C1D55007F00E1 /* HyRead.xcdatamodeld */; };
 		73A30FA82B9C1D57007F00E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A30FA72B9C1D57007F00E1 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7383FCDC2B9CB53000882087 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		7383FCE12B9CBBBF00882087 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		73A30F982B9C1D55007F00E1 /* HyRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73A30FA52B9C1D55007F00E1 /* HyRead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HyRead.xcdatamodel; sourceTree = "<group>"; };
@@ -49,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7383FCD52B9C977B00882087 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7383FCD62B9CB42200882087 /* BookCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7383FCDC2B9CB53000882087 /* BookCollectionViewCell.xib */,
+				7383FCE12B9CBBBF00882087 /* BookCollectionViewCell.swift */,
+			);
+			path = BookCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		73A30F8F2B9C1D54007F00E1 = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +88,8 @@
 		73A30F9A2B9C1D55007F00E1 /* HyRead */ = {
 			isa = PBXGroup;
 			children = (
+				7383FCD52B9C977B00882087 /* Extensions */,
 				73A30FBE2B9C2D96007F00E1 /* Networking */,
-				73A30FBD2B9C2D71007F00E1 /* Extensions */,
 				73A30FBC2B9C2D54007F00E1 /* Resources */,
 				73A30FBB2B9C2D29007F00E1 /* Classes */,
 				73A30FBA2B9C2D1D007F00E1 /* Models */,
@@ -96,6 +116,7 @@
 		73A30FB72B9C2CE3007F00E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7383FCD62B9CB42200882087 /* BookCollectionViewCell */,
 				73A30FA92B9C1D57007F00E1 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -139,13 +160,6 @@
 				73A30FA72B9C1D57007F00E1 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		73A30FBD2B9C2D71007F00E1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		73A30FBE2B9C2D96007F00E1 /* Networking */ = {
@@ -216,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73A30FAB2B9C1D57007F00E1 /* LaunchScreen.storyboard in Resources */,
+				7383FCDE2B9CB53000882087 /* BookCollectionViewCell.xib in Resources */,
 				73A30FB62B9C23ED007F00E1 /* MainViewController.xib in Resources */,
 				73A30FA82B9C1D57007F00E1 /* Assets.xcassets in Resources */,
 			);
@@ -231,6 +246,7 @@
 				73A30FC42B9C39A9007F00E1 /* MainViewModel.swift in Sources */,
 				73A30FC22B9C3328007F00E1 /* MainViewController+CollectionView.swift in Sources */,
 				73A30FCA2B9C42EC007F00E1 /* BooksModel.swift in Sources */,
+				7383FCE22B9CBBBF00882087 /* BookCollectionViewCell.swift in Sources */,
 				73A30FC02B9C30F1007F00E1 /* MainViewController.swift in Sources */,
 				73A30FCC2B9C5021007F00E1 /* Observable.swift in Sources */,
 				73A30FC82B9C427B007F00E1 /* APIManager.swift in Sources */,
