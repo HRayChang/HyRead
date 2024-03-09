@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		73A30F9C2B9C1D55007F00E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */; };
-		73A30FA02B9C1D55007F00E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30F9F2B9C1D55007F00E1 /* ViewController.swift */; };
-		73A30FA32B9C1D55007F00E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A30FA12B9C1D55007F00E1 /* Main.storyboard */; };
 		73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FA42B9C1D55007F00E1 /* HyRead.xcdatamodeld */; };
 		73A30FA82B9C1D57007F00E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A30FA72B9C1D57007F00E1 /* Assets.xcassets */; };
 		73A30FAB2B9C1D57007F00E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A30FA92B9C1D57007F00E1 /* LaunchScreen.storyboard */; };
@@ -18,8 +16,6 @@
 /* Begin PBXFileReference section */
 		73A30F982B9C1D55007F00E1 /* HyRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73A30F9F2B9C1D55007F00E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		73A30FA22B9C1D55007F00E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73A30FA52B9C1D55007F00E1 /* HyRead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HyRead.xcdatamodel; sourceTree = "<group>"; };
 		73A30FA72B9C1D57007F00E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73A30FAA2B9C1D57007F00E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,8 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */,
-				73A30F9F2B9C1D55007F00E1 /* ViewController.swift */,
-				73A30FA12B9C1D55007F00E1 /* Main.storyboard */,
 				73A30FA72B9C1D57007F00E1 /* Assets.xcassets */,
 				73A30FA92B9C1D57007F00E1 /* LaunchScreen.storyboard */,
 				73A30FAC2B9C1D57007F00E1 /* Info.plist */,
@@ -127,7 +121,6 @@
 			files = (
 				73A30FAB2B9C1D57007F00E1 /* LaunchScreen.storyboard in Resources */,
 				73A30FA82B9C1D57007F00E1 /* Assets.xcassets in Resources */,
-				73A30FA32B9C1D55007F00E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */,
-				73A30FA02B9C1D55007F00E1 /* ViewController.swift in Sources */,
 				73A30F9C2B9C1D55007F00E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +139,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		73A30FA12B9C1D55007F00E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73A30FA22B9C1D55007F00E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		73A30FA92B9C1D57007F00E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
