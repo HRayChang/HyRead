@@ -23,6 +23,6 @@ class BookCollectionViewCell: UICollectionViewCell {
     }
 
     func setupCell(viewModel: BookCollectionCellViewModel) {
-        
+        self.titleLabel.text = viewModel.title
     }
 }

@@ -11,6 +11,7 @@
 		7383FCE22B9CBBBF00882087 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCE12B9CBBBF00882087 /* BookCollectionViewCell.swift */; };
 		7383FCE42B9CBFAC00882087 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCE32B9CBFAC00882087 /* UIViewExtensions.swift */; };
 		7383FCE62B9CC0C100882087 /* BookCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCE52B9CC0C100882087 /* BookCollectionCellViewModel.swift */; };
+		7383FCE92B9CC4E700882087 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7383FCE82B9CC4E700882087 /* SDWebImage */; };
 		73A30F9C2B9C1D55007F00E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */; };
 		73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FA42B9C1D55007F00E1 /* HyRead.xcdatamodeld */; };
 		73A30FA82B9C1D57007F00E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A30FA72B9C1D57007F00E1 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7383FCE92B9CC4E700882087 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +195,9 @@
 			dependencies = (
 			);
 			name = HyRead;
+			packageProductDependencies = (
+				7383FCE82B9CC4E700882087 /* SDWebImage */,
+			);
 			productName = HyRead;
 			productReference = 73A30F982B9C1D55007F00E1 /* HyRead.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 73A30F8F2B9C1D54007F00E1;
+			packageReferences = (
+				7383FCE72B9CC4E700882087 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 73A30F992B9C1D55007F00E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -477,6 +485,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7383FCE72B9CC4E700882087 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7383FCE82B9CC4E700882087 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7383FCE72B9CC4E700882087 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		73A30FA42B9C1D55007F00E1 /* HyRead.xcdatamodeld */ = {
