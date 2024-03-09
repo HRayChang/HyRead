@@ -9,6 +9,9 @@ import Foundation
 
 class MainViewModel {
     
+    var isLoading: Observable<Bool> = Observable(false)
+    var dataSource: Books?
+    
     func numberOfSection() -> Int {
         1
     }
@@ -18,10 +21,17 @@ class MainViewModel {
     }
     
     func getData() {
-        APIManager.getMyLibrary { result in
+        
+        if isLoading.value ?? true {
+            return
+        }
+        isLoading.value = true
+        APIManager.getMyLibrary { [weak self] result in
+            self?.isLoading.value = false
             switch result {
             case .success(let data):
                 print("My Library Books: \(data)")
+                self?.dataSource = data
             case .failure(let error):
                 print(error)
             }

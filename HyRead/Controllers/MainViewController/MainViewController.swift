@@ -11,25 +11,42 @@ class MainViewController: UIViewController {
     
     // IBoutlets
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // ViewModel
     var viewModel: MainViewModel = MainViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       configView()
+        
+        configView()
+        bindViewModel()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.getData()
     }
     
     func configView() {
         self.title = "我的書櫃"
-        
         self.view.backgroundColor = .red
         
         setupCollectionView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        viewModel.getData()
+    func bindViewModel() {
+        viewModel.isLoading.bind { [weak self] isLoading in
+            guard let self = self, let isLoading = isLoading else {
+                return
+            }
+            DispatchQueue.main.async {
+                if isLoading {
+                    self.activityIndicator.startAnimating()
+                } else {
+                    self.activityIndicator.stopAnimating()
+                }
+            }
+        }
     }
 }
