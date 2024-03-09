@@ -16,7 +16,13 @@ class BookCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        containerView.round()
+        containerView.addBorder(color: .lightGray, width: 1)
+    
+        bookImageView.round()
     }
 
+    func setupCell(viewModel: BookCollectionCellViewModel) {
+        
+    }
 }
