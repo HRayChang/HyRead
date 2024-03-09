@@ -20,7 +20,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func registerCells() {
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(BookCollectionViewCell.register(), forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
     }
     
     func reloadCollectionView() {
@@ -38,20 +38,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        
-        let bookData = cellDataSource[indexPath.row]
-        let tempText = self.viewModel.getBookTitle(bookData)
-           
-           // 創建一個 UILabel
-           let label = UILabel(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
-           label.text = tempText
-           label.textAlignment = .center
-           label.textColor = .black
-           
-           // 將 UILabel 添加為儲存格的子視圖
-           cell.addSubview(label)
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as? BookCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        let cellViewModel = cellDataSource[indexPath.row]
+        cell.setupCell(viewModel: cellViewModel)
         return cell
     }
 }

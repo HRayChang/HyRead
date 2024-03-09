@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     var viewModel: MainViewModel = MainViewModel()
     
     // Variables
-    var cellDataSource: Books = []
+    var cellDataSource: [BookCollectionCellViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

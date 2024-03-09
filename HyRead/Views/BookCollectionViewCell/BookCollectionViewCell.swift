@@ -10,6 +10,16 @@ import SDWebImage
 
 class BookCollectionViewCell: UICollectionViewCell {
 
+    static var identifier: String {
+        get {
+            "BookCollectionViewCell"
+        }
+    }
+    
+    static func register() -> UINib {
+        UINib(nibName: "BookCollectionViewCell", bundle: nil)
+    }
+    
     // IBoutlets
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bookImageView: UIImageView!
@@ -17,7 +27,6 @@ class BookCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.round()
         containerView.addBorder(color: .lightGray, width: 1)
     
         bookImageView.round()
