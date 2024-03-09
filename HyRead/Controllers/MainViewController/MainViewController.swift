@@ -16,6 +16,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       configView()
+    }
+    
+    func configView() {
         self.title = "我的書櫃"
+        
+        setupCollectionView()
     }
 }
