@@ -15,6 +15,9 @@
 		73A30FC02B9C30F1007F00E1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FBF2B9C30F0007F00E1 /* MainViewController.swift */; };
 		73A30FC22B9C3328007F00E1 /* MainViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FC12B9C3328007F00E1 /* MainViewController+CollectionView.swift */; };
 		73A30FC42B9C39A9007F00E1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FC32B9C39A9007F00E1 /* MainViewModel.swift */; };
+		73A30FC62B9C40CD007F00E1 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FC52B9C40CD007F00E1 /* NetworkConstant.swift */; };
+		73A30FC82B9C427B007F00E1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FC72B9C427B007F00E1 /* APIManager.swift */; };
+		73A30FCA2B9C42EC007F00E1 /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FC92B9C42EC007F00E1 /* BooksModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		73A30FBF2B9C30F0007F00E1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		73A30FC12B9C3328007F00E1 /* MainViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		73A30FC32B9C39A9007F00E1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		73A30FC52B9C40CD007F00E1 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		73A30FC72B9C427B007F00E1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		73A30FC92B9C42EC007F00E1 /* BooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		73A30FBA2B9C2D1D007F00E1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				73A30FC92B9C42EC007F00E1 /* BooksModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +148,8 @@
 		73A30FBE2B9C2D96007F00E1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				73A30FC52B9C40CD007F00E1 /* NetworkConstant.swift */,
+				73A30FC72B9C427B007F00E1 /* APIManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -218,8 +227,11 @@
 			files = (
 				73A30FC42B9C39A9007F00E1 /* MainViewModel.swift in Sources */,
 				73A30FC22B9C3328007F00E1 /* MainViewController+CollectionView.swift in Sources */,
+				73A30FCA2B9C42EC007F00E1 /* BooksModel.swift in Sources */,
 				73A30FC02B9C30F1007F00E1 /* MainViewController.swift in Sources */,
+				73A30FC82B9C427B007F00E1 /* APIManager.swift in Sources */,
 				73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */,
+				73A30FC62B9C40CD007F00E1 /* NetworkConstant.swift in Sources */,
 				73A30F9C2B9C1D55007F00E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
