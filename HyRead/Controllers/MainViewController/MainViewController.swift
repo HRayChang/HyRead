@@ -12,7 +12,9 @@ class MainViewController: UIViewController {
     // IBoutlets
     @IBOutlet weak var collectionView: UICollectionView!
     
-
+    // ViewModel
+    var viewModel: MainViewModel = MainViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,8 @@ class MainViewController: UIViewController {
     
     func configView() {
         self.title = "我的書櫃"
+        
+        self.view.backgroundColor = .red
         
         setupCollectionView()
     }

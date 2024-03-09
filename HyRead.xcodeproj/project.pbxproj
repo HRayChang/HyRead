@@ -14,6 +14,7 @@
 		73A30FB62B9C23ED007F00E1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73A30FB42B9C23ED007F00E1 /* MainViewController.xib */; };
 		73A30FC02B9C30F1007F00E1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FBF2B9C30F0007F00E1 /* MainViewController.swift */; };
 		73A30FC22B9C3328007F00E1 /* MainViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FC12B9C3328007F00E1 /* MainViewController+CollectionView.swift */; };
+		73A30FC42B9C39A9007F00E1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FC32B9C39A9007F00E1 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		73A30FB42B9C23ED007F00E1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		73A30FBF2B9C30F0007F00E1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		73A30FC12B9C3328007F00E1 /* MainViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		73A30FC32B9C39A9007F00E1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		73A30FB82B9C2D06007F00E1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				73A30FC32B9C39A9007F00E1 /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A30FC42B9C39A9007F00E1 /* MainViewModel.swift in Sources */,
 				73A30FC22B9C3328007F00E1 /* MainViewController+CollectionView.swift in Sources */,
 				73A30FC02B9C30F1007F00E1 /* MainViewController.swift in Sources */,
 				73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */,

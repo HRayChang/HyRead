@@ -15,13 +15,36 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         self.collectionView.dataSource = self
         
         self.collectionView.backgroundColor = .clear
+        
+        self.registerCells()
+    }
+    
+    func registerCells() {
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModel.numberOfSection()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        0
+        return viewModel.numberOfItems(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        let tempText = "Temp Text"
+           
+           // 創建一個 UILabel
+           let label = UILabel(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
+           label.text = tempText
+           label.textAlignment = .center
+           label.textColor = .black
+           
+           // 將 UILabel 添加為儲存格的子視圖
+           cell.addSubview(label)
+        
+        return cell
     }
 }
