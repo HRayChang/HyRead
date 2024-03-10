@@ -28,26 +28,27 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    var viewModel: BookCollectionCellViewModel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         bookImageView.round()
     }
-
+    
     func setupCell(viewModel: BookCollectionCellViewModel) {
+        self.viewModel = viewModel
         self.titleLabel.text = viewModel.title
         self.bookImageView.sd_setImage(with: viewModel.coverURL)
+        updateFavoriteButtonImage()
     }
     
-    // 移動邏輯到VM
     @IBAction func buttonTapped(_ sender: UIButton) {
-            if isFavorit == false {
-                isFavorit = true
-                let isFavotiteColor = UIColor(red: 0.314, green: 0.89, blue: 0.761, alpha: 1)
-                let heartFill = UIImage(systemName: "heart.fill")?.withTintColor(isFavotiteColor, renderingMode: .alwaysOriginal)
-                sender.setImage(heartFill, for: .normal)
-            } else {
-                isFavorit = false
-                sender.setImage(UIImage(systemName: "heart"), for: .normal)
-            }
+            viewModel?.toggleFavorite()
+            updateFavoriteButtonImage()
+        }
+        
+        private func updateFavoriteButtonImage() {
+            guard let viewModel = viewModel else { return }
+            favoriteButton.setImage(viewModel.favoriteButtonImage, for: .normal)
         }
 }
