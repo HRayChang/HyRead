@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     
     // ViewModel
     var viewModel: MainViewModel = MainViewModel()
+    var coreDataViewModel: CoreDataViewModel = CoreDataViewModel()
     
     // Variables
     var cellDataSource: [BookCollectionCellViewModel] = []
@@ -42,8 +43,8 @@ class MainViewController: UIViewController {
     
     func configView() {
         self.title = "我的書櫃"
-        self.navigationRightButton.tintColor = .black
-        self.navigationLeftButton.tintColor = .black
+        self.navigationRightButton.tintColor = .label
+        self.navigationLeftButton.tintColor = .label
         self.navigationItem.rightBarButtonItem = navigationRightButton
         self.navigationItem.leftBarButtonItem = navigationLeftButton
         
