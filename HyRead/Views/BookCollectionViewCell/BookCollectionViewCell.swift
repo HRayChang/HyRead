@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class BookCollectionViewCell: UICollectionViewCell {
-
+    
     static var identifier: String {
         get {
             "BookCollectionViewCell"
@@ -38,6 +38,7 @@ class BookCollectionViewCell: UICollectionViewCell {
         self.bookImageView.sd_setImage(with: viewModel.coverURL)
     }
     
+    // 移動邏輯到VM
     @IBAction func buttonTapped(_ sender: UIButton) {
             if isFavorit == false {
                 isFavorit = true

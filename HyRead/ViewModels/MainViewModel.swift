@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewModel {
     
+    let coreDataViewModel = CoreDataViewModel()
+    
     var isLoading: Observable<Bool> = Observable(false)
     var cellDataSource: Observable<[BookCollectionCellViewModel]> = Observable(nil)
     var dataSource: Books?
@@ -45,7 +47,12 @@ class MainViewModel {
             
             switch result {
             case .success(let data):
+                guard !data.isEmpty else { return }
                 print("My Library Books Count: \(data.count)")
+                for book in data {
+                    print(book)
+                    self?.coreDataViewModel.addCoreDataBooks(book: book)
+                }
                 self?.dataSource = data
                 self?.mapCellData()
             case .failure(let error):

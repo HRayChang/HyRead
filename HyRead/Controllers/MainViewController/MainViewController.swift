@@ -15,7 +15,6 @@ class MainViewController: UIViewController {
     
     // ViewModel
     var viewModel: MainViewModel = MainViewModel()
-    var coreDataViewModel: CoreDataViewModel = CoreDataViewModel()
     
     // Variables
     var cellDataSource: [BookCollectionCellViewModel] = []
