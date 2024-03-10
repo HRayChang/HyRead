@@ -28,6 +28,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBv-YC-RV8">
+                                <rect key="frame" x="69" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="A58-cd-kQw"/>
+                                    <constraint firstAttribute="width" constant="40" id="poG-qG-JbM"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="qbo-j2-0ln"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -37,6 +50,8 @@
                             <constraint firstItem="jMe-5S-sZo" firstAttribute="leading" secondItem="T3r-fx-zX7" secondAttribute="leading" id="JmZ-R5-o3g"/>
                             <constraint firstAttribute="trailing" secondItem="jMe-5S-sZo" secondAttribute="trailing" id="O0l-Nk-XoI"/>
                             <constraint firstItem="jMe-5S-sZo" firstAttribute="top" secondItem="T3r-fx-zX7" secondAttribute="top" id="Tg0-RG-MkV"/>
+                            <constraint firstAttribute="trailing" secondItem="VBv-YC-RV8" secondAttribute="trailing" id="Vd6-BF-si2"/>
+                            <constraint firstItem="VBv-YC-RV8" firstAttribute="top" secondItem="T3r-fx-zX7" secondAttribute="top" id="lDL-Lz-OOG"/>
                             <constraint firstItem="gDr-k5-vgI" firstAttribute="top" secondItem="jMe-5S-sZo" secondAttribute="bottom" id="oj4-la-gPZ"/>
                             <constraint firstAttribute="bottom" secondItem="gDr-k5-vgI" secondAttribute="bottom" id="ya8-2j-Bga"/>
                         </constraints>
@@ -55,9 +70,13 @@
             <connections>
                 <outlet property="bookImageView" destination="jMe-5S-sZo" id="x9w-Dj-cSz"/>
                 <outlet property="containerView" destination="T3r-fx-zX7" id="jxB-Cs-jKz"/>
+                <outlet property="favoriteButton" destination="VBv-YC-RV8" id="aaa-SY-iuO"/>
                 <outlet property="titleLabel" destination="gDr-k5-vgI" id="MSM-2W-vhX"/>
             </connections>
             <point key="canvasLocation" x="183.96946564885496" y="70.422535211267615"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+    </resources>
 </document>

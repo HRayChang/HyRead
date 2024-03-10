@@ -19,6 +19,11 @@ class MainViewController: UIViewController {
     // Variables
     var cellDataSource: [BookCollectionCellViewModel] = []
     
+    let navigationRightButton = UIBarButtonItem(image: UIImage(systemName: "multiply"),
+                                           style: .done,
+                                           target: .none,
+                                           action: .none)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +38,8 @@ class MainViewController: UIViewController {
     
     func configView() {
         self.title = "我的書櫃"
-        self.view.backgroundColor = .red
+        self.navigationRightButton.tintColor = .black
+        self.navigationItem.rightBarButtonItem = navigationRightButton
         
         setupCollectionView()
     }
