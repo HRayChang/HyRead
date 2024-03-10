@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+
     func setupCollectionView() {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -44,5 +44,16 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cellViewModel = cellDataSource[indexPath.row]
         cell.setupCell(viewModel: cellViewModel)
         return cell
+    }
+}
+
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return viewModel.itemSize
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return viewModel.sectionInsets
     }
 }

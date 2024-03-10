@@ -6,12 +6,25 @@
 //
 
 import Foundation
+import UIKit
 
 class MainViewModel {
     
     var isLoading: Observable<Bool> = Observable(false)
     var cellDataSource: Observable<[BookCollectionCellViewModel]> = Observable(nil)
     var dataSource: Books?
+    
+    var itemsPerRow: CGFloat { return 3 }
+    var sectionInsets: UIEdgeInsets {
+        return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+    }
+    var itemSize: CGSize {
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = UIScreen.main.bounds.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        let heightPerItem = widthPerItem * 1.95
+        return CGSize(width: widthPerItem, height: heightPerItem)
+    }
     
     func numberOfSection() -> Int {
         1

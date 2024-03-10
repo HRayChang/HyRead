@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func round(_ radious: CGFloat = 10) {
+    func round(_ radious: CGFloat = 8) {
         self.layer.cornerRadius = radious
         self.clipsToBounds = true
     }
