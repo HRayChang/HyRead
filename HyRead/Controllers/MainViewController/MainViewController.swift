@@ -23,6 +23,10 @@ class MainViewController: UIViewController {
                                            style: .done,
                                            target: .none,
                                            action: .none)
+    let navigationLeftButton = UIBarButtonItem(image: UIImage(systemName: "book.circle"),
+                                               style: .done,
+                                               target: .none,
+                                               action: .none)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +43,9 @@ class MainViewController: UIViewController {
     func configView() {
         self.title = "我的書櫃"
         self.navigationRightButton.tintColor = .black
+        self.navigationLeftButton.tintColor = .black
         self.navigationItem.rightBarButtonItem = navigationRightButton
+        self.navigationItem.leftBarButtonItem = navigationLeftButton
         
         setupCollectionView()
     }
