@@ -43,18 +43,18 @@ class MainViewModel {
         }
         isLoading.value = true
         APIManager.getMyLibrary { [weak self] result in
-            self?.isLoading.value = false
+            
             
             switch result {
             case .success(let data):
                 guard !data.isEmpty else { return }
                 print("My Library Books Count: \(data.count)")
                 for book in data {
-                    print(book)
                     self?.coreDataViewModel.addCoreDataBooks(book: book)
                 }
                 self?.dataSource = data
                 self?.mapCellData()
+                self?.isLoading.value = false
             case .failure(let error):
                 print(error)
             }

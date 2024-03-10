@@ -23,8 +23,9 @@ class CoreDataViewModel: ObservableObject {
     }
     
     func fetchCoreDataBooks() {
-        let request = NSFetchRequest<Entity>(entityName: "Entity")
         
+        print(NSPersistentContainer.defaultDirectoryURL())
+        let request = NSFetchRequest<Entity>(entityName: "Entity")
         do {
             savedEntities = try container.viewContext.fetch(request)
         } catch let error {
@@ -42,7 +43,6 @@ class CoreDataViewModel: ObservableObject {
     func saveCoreDataBooks() {
         do {
             try container.viewContext.save()
-            fetchCoreDataBooks()
         } catch let error {
             print("Error saving core data. \(error)")
         }
