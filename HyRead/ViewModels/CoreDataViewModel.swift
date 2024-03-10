@@ -47,4 +47,16 @@ class CoreDataViewModel: ObservableObject {
             print("Error saving core data. \(error)")
         }
     }
+    
+    func clearCoreDataBooks() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Entity")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try container.persistentStoreCoordinator.execute(deleteRequest, with: container.viewContext)
+//            savedEntities.removeAll()
+        } catch let error {
+            print("Error clearing core data. \(error)")
+        }
+    }
 }
