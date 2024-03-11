@@ -39,6 +39,7 @@ class CoreDataViewModel: ObservableObject {
         bookEntity.uuid = Int16(book.uuid)
         bookEntity.title = book.title
         bookEntity.coverURL = book.coverURL
+        bookEntity.isFavorite = book.isFavorite ?? false
         
         getCoverImageData(urlString: book.coverURL) { imageData in
             bookEntity.coverImage = imageData

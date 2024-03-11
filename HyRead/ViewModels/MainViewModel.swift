@@ -64,7 +64,7 @@ class MainViewModel {
                 guard !entities.isEmpty else { return }
                 var savedBooks: Books = []
                 for data in entities {
-                    let book = Book(uuid: Int(data.uuid), title: data.title ?? "", coverURL: data.coverURL ?? "", coverImage: data.coverImage, publishDate: "", publisher: "", author: "")
+                    let book = Book(uuid: Int(data.uuid), title: data.title ?? "", coverURL: data.coverURL ?? "", coverImage: data.coverImage, isFavorite: data.isFavorite, publishDate: "", publisher: "", author: "")
                     savedBooks.append(book)
                 }
                 self.dataSource = savedBooks
