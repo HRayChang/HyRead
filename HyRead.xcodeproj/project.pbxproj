@@ -17,6 +17,7 @@
 		7383FCFD2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCFC2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift */; };
 		7383FCFF2B9E381200882087 /* FavoritiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCFE2B9E381200882087 /* FavoritiesViewController.swift */; };
 		7383FD012B9EDC6200882087 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FD002B9EDC6200882087 /* ImageManager.swift */; };
+		7383FD032B9EE8F300882087 /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FD022B9EE8F300882087 /* NetworkChecker.swift */; };
 		73A30F9C2B9C1D55007F00E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */; };
 		73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FA42B9C1D55007F00E1 /* HyRead.xcdatamodeld */; };
 		73A30FA82B9C1D57007F00E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A30FA72B9C1D57007F00E1 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		7383FCFC2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritiesViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		7383FCFE2B9E381200882087 /* FavoritiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritiesViewController.swift; sourceTree = "<group>"; };
 		7383FD002B9EDC6200882087 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		7383FD022B9EE8F300882087 /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		73A30F982B9C1D55007F00E1 /* HyRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73A30FA52B9C1D55007F00E1 /* HyRead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HyRead.xcdatamodel; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				73A30FC52B9C40CD007F00E1 /* NetworkConstant.swift */,
 				73A30FC72B9C427B007F00E1 /* APIManager.swift */,
 				7383FD002B9EDC6200882087 /* ImageManager.swift */,
+				7383FD022B9EE8F300882087 /* NetworkChecker.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				73A30FC22B9C3328007F00E1 /* MainViewController+CollectionView.swift in Sources */,
 				73A30FCA2B9C42EC007F00E1 /* BooksModel.swift in Sources */,
 				7383FCFF2B9E381200882087 /* FavoritiesViewController.swift in Sources */,
+				7383FD032B9EE8F300882087 /* NetworkChecker.swift in Sources */,
 				7383FCFD2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift in Sources */,
 				7383FCE22B9CBBBF00882087 /* BookCollectionViewCell.swift in Sources */,
 				7383FCE62B9CC0C100882087 /* BookCollectionCellViewModel.swift in Sources */,

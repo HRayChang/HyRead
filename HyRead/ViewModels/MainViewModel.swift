@@ -38,28 +38,29 @@ class MainViewModel {
     
     func getData() {
         
-        if isLoading.value ?? true {
-            return
-        }
+        if isLoading.value ?? true { return }
         isLoading.value = true
-       
-        APIManager.getMyLibrary { [weak self] result in
-            
-            switch result {
-            case .success(let data):
-                
-                guard !data.isEmpty else { return }
-                self?.coreDataViewModel.clearCoreDataBooks()
-                for book in data {
-                    self?.coreDataViewModel.addCoreDataBooks(book: book)
+        
+        if NetworkChecker.isConnectedToNetwork() {
+            APIManager.getMyLibrary { [weak self] result in
+                switch result {
+                case .success(let data):
+                    
+                    guard !data.isEmpty else { return }
+                    self?.coreDataViewModel.clearCoreDataBooks()
+                    for book in data {
+                        self?.coreDataViewModel.addCoreDataBooks(book: book)
+                    }
+                    self?.dataSource = data
+                    self?.mapCellData()
+                    
+                case .failure(let error):
+                    print(error)
                 }
-                self?.dataSource = data
-                self?.mapCellData()
-                
-            case .failure(let error):
-                print(error)
+                self?.isLoading.value = false
             }
-            self?.isLoading.value = false
+        } else {
+            print("裝置未連接到網路")
         }
     }
     
