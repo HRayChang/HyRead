@@ -77,4 +77,15 @@ class MainViewController: UIViewController {
     @objc func leftButtonTapped() {
         navigationController?.pushViewController(FavoritiesViewController(), animated: true)
     }
+    
+    func openDetail(uuid: Int) {
+        guard let book = viewModel.retriveBook(with: uuid) else {
+            return
+        }
+        let detailViewModel = DetailViewModel(book: book)
+        let detailViewController = DetailViewController(viewModel: detailViewModel)
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(detailViewController, animated: true)
+        }
+    }
 }

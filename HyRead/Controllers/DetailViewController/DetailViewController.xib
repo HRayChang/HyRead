@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="HyRead" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="RtJ-PI-E5d" id="JFG-gX-zIb"/>
+                <outlet property="titleLabel" destination="Rej-iM-thW" id="bzd-we-P93"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RtJ-PI-E5d">
+                    <rect key="frame" x="30" y="88.999999999999972" width="333" height="511.33333333333326"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-iM-thW">
+                    <rect key="frame" x="30" y="615.33333333333337" width="333" height="142.66666666666663"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rej-iM-thW" secondAttribute="trailing" constant="30" id="3eg-sz-Q3X"/>
+                <constraint firstItem="RtJ-PI-E5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="IQm-uP-HKk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RtJ-PI-E5d" secondAttribute="trailing" constant="30" id="L2d-cr-OhN"/>
+                <constraint firstItem="Rej-iM-thW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="LBu-GE-5Ql"/>
+                <constraint firstItem="RtJ-PI-E5d" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="SsJ-H7-3Ob"/>
+                <constraint firstItem="RtJ-PI-E5d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="T3C-U4-E3P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rej-iM-thW" secondAttribute="bottom" constant="60" id="kuD-bZ-tJv"/>
+                <constraint firstItem="Rej-iM-thW" firstAttribute="top" secondItem="RtJ-PI-E5d" secondAttribute="bottom" constant="15" id="lqf-GA-PQc"/>
+            </constraints>
+            <point key="canvasLocation" x="40" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

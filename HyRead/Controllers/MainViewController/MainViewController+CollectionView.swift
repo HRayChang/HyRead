@@ -45,6 +45,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.setupCell(viewModel: cellViewModel)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let uuid = cellDataSource[indexPath.row].uuid
+        self.openDetail(uuid: uuid)
+    }
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
