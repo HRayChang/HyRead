@@ -11,6 +11,7 @@ class FavoritiesViewController: UIViewController {
     
     // IBoutlets
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +21,6 @@ class FavoritiesViewController: UIViewController {
     
     func configView() {
         self.title = "我的收藏"
+        navigationController?.navigationBar.tintColor = .label
     }
 }

@@ -43,8 +43,7 @@ class MainViewController: UIViewController {
                                                    style: .done,
                                                    target: self,
                                                    action: #selector(leftButtonTapped))
-        navigationRightButton.tintColor = .label
-        navigationLeftButton.tintColor = .label
+        navigationController?.navigationBar.tintColor = .label
         self.navigationItem.rightBarButtonItem = navigationRightButton
         self.navigationItem.leftBarButtonItem = navigationLeftButton
         

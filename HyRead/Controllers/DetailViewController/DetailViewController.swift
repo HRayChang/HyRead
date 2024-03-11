@@ -34,5 +34,6 @@ class DetailViewController: UIViewController {
     func configView() {
         titleLabel.text = viewModel.title
         imageView.sd_setImage(with: viewModel.coverURL)
+        navigationController?.navigationBar.tintColor = .label
     }
 }

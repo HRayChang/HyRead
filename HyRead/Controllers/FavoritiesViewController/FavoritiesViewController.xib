@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritiesViewController" customModule="HyRead" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="YRI-V3-lqv" id="NBm-KP-HhA"/>
                 <outlet property="collectionView" destination="kyA-0G-sO1" id="AXA-37-iHD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,14 +30,20 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YRI-V3-lqv">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <color key="color" systemColor="systemGray2Color"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="YRI-V3-lqv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FJV-hn-GDF"/>
                 <constraint firstItem="kyA-0G-sO1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Kye-xu-mfe"/>
                 <constraint firstItem="kyA-0G-sO1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Lws-Jz-ib5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kyA-0G-sO1" secondAttribute="trailing" id="WZP-cE-H8Z"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kyA-0G-sO1" secondAttribute="bottom" id="Xdb-Wa-GAz"/>
+                <constraint firstItem="YRI-V3-lqv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y3M-uj-LKs"/>
             </constraints>
             <point key="canvasLocation" x="52" y="21"/>
         </view>
@@ -44,6 +51,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
