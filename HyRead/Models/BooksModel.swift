@@ -6,16 +6,19 @@
 //
 
 import Foundation
+import UIKit
 
 struct Book: Codable {
-    let uuid: Int
-    let title: String
-    let coverURL: String
-    let publishDate, publisher, author: String
+    var uuid: Int
+    var title: String
+    var coverURL: String
+    var coverImage: Data?
+    var publishDate, publisher, author: String
 
     enum CodingKeys: String, CodingKey {
         case uuid, title
         case coverURL = "coverUrl"
+        case coverImage
         case publishDate, publisher, author
     }
 }

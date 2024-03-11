@@ -60,7 +60,17 @@ class MainViewModel {
                 self?.isLoading.value = false
             }
         } else {
-            print("裝置未連接到網路")
+            coreDataViewModel.fetchCoreDataBooks { entities in
+                guard !entities.isEmpty else { return }
+                var savedBooks: Books = []
+                for data in entities {
+                    let book = Book(uuid: Int(data.uuid), title: data.title ?? "", coverURL: data.coverURL ?? "", coverImage: data.coverImage, publishDate: "", publisher: "", author: "")
+                    savedBooks.append(book)
+                }
+                self.dataSource = savedBooks
+                self.mapCellData()
+                self.isLoading.value = false
+            }
         }
     }
     

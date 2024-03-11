@@ -22,11 +22,12 @@ class CoreDataViewModel: ObservableObject {
         }
     }
     
-    func fetchCoreDataBooks() {
+    func fetchCoreDataBooks(completion: @escaping ([Entity]) -> Void) {
         
         let request = NSFetchRequest<Entity>(entityName: "Entity")
         do {
             savedEntities = try container.viewContext.fetch(request)
+            completion(savedEntities)
         } catch let error {
             print("Error fetching. \(error)")
         }
