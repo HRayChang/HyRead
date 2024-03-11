@@ -66,6 +66,7 @@ class MainViewModel {
                     let book = Book(uuid: Int(data.uuid), title: data.title ?? "", coverURL: data.coverURL ?? "", coverImage: data.coverImage, isFavorite: data.isFavorite, publishDate: "", publisher: "", author: "")
                     savedBooks.append(book)
                 }
+                savedBooks.sort { $0.uuid < $1.uuid }
                 self.dataSource = savedBooks
                 self.mapCellData()
                 self.isLoading.value = false
