@@ -33,6 +33,10 @@ Introducing a personal library designed to accommodate your reading preferences,
 - iOS 17.2+
 - Xcode 15.1
 
+<!-- Frameworks -->
+## Frameworks
+- SDWebImage
+
 <!-- Features -->
 ## Features
 - User-friendly interface built with **XIB** for a smooth and intuitive experience.
