@@ -8,7 +8,7 @@
 
 A personal library that enables you to access and add your favorite books, whether offline or online.
 
-<img src="https://github.com/HRayChang/HyRead/assets/111962195/79ed3227-ccea-48b7-8ec4-5b0f17329818" alt="HyRead" width="400">
+<img src="https://github.com/HRayChang/HyRead/assets/111962195/f0376b70-9675-4073-a57d-9b8c08704fe3" alt="HyRead" width="400">
 </div>
 
 <br />
