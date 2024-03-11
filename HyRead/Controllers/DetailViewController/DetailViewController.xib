@@ -21,11 +21,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RtJ-PI-E5d">
-                    <rect key="frame" x="8" y="59" width="377" height="639"/>
+                    <rect key="frame" x="30" y="88.999999999999972" width="333" height="511.33333333333326"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-iM-thW">
-                    <rect key="frame" x="8" y="714" width="377" height="104"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-iM-thW">
+                    <rect key="frame" x="30" y="615.33333333333337" width="333" height="142.66666666666663"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -33,14 +33,14 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rej-iM-thW" secondAttribute="trailing" constant="8" id="3eg-sz-Q3X"/>
-                <constraint firstItem="RtJ-PI-E5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="IQm-uP-HKk"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RtJ-PI-E5d" secondAttribute="trailing" constant="8" id="L2d-cr-OhN"/>
-                <constraint firstItem="Rej-iM-thW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="LBu-GE-5Ql"/>
-                <constraint firstItem="RtJ-PI-E5d" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.75" id="SsJ-H7-3Ob"/>
-                <constraint firstItem="RtJ-PI-E5d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="T3C-U4-E3P"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rej-iM-thW" secondAttribute="bottom" id="kuD-bZ-tJv"/>
-                <constraint firstItem="Rej-iM-thW" firstAttribute="top" secondItem="RtJ-PI-E5d" secondAttribute="bottom" constant="16" id="lqf-GA-PQc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rej-iM-thW" secondAttribute="trailing" constant="30" id="3eg-sz-Q3X"/>
+                <constraint firstItem="RtJ-PI-E5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="IQm-uP-HKk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RtJ-PI-E5d" secondAttribute="trailing" constant="30" id="L2d-cr-OhN"/>
+                <constraint firstItem="Rej-iM-thW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="LBu-GE-5Ql"/>
+                <constraint firstItem="RtJ-PI-E5d" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="SsJ-H7-3Ob"/>
+                <constraint firstItem="RtJ-PI-E5d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="T3C-U4-E3P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rej-iM-thW" secondAttribute="bottom" constant="60" id="kuD-bZ-tJv"/>
+                <constraint firstItem="Rej-iM-thW" firstAttribute="top" secondItem="RtJ-PI-E5d" secondAttribute="bottom" constant="15" id="lqf-GA-PQc"/>
             </constraints>
             <point key="canvasLocation" x="40" y="20"/>
         </view>

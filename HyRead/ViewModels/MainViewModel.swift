@@ -80,4 +80,11 @@ class MainViewModel {
     func mapCellData() {
         self.cellDataSource.value = self.dataSource?.compactMap({BookCollectionCellViewModel(book: $0)})
     }
+    
+    func retriveBook(with uuid: Int) -> Book? {
+        guard let book = dataSource?.first(where: {$0.uuid == uuid}) else {
+            return nil
+        }
+        return book
+    }
 }

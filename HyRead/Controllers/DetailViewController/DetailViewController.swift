@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
     
@@ -31,6 +32,7 @@ class DetailViewController: UIViewController {
     }
     
     func configView() {
-        
+        titleLabel.text = viewModel.title
+        imageView.sd_setImage(with: viewModel.coverURL)
     }
 }
