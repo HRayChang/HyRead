@@ -20,8 +20,6 @@ class BookCollectionViewCell: UICollectionViewCell {
         UINib(nibName: "BookCollectionViewCell", bundle: nil)
     }
     
-    var isFavorit: Bool = false
-    
     // IBoutlets
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bookImageView: UIImageView!

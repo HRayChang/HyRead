@@ -22,6 +22,15 @@ class BookCollectionCellViewModel {
         self.isFavorite = book.isFavorite ?? false
         self.title = book.title
         self.coverURL = makeImageURL(book.coverURL)
+
+        coreDataViewModel.fetchIsFavorite { [unowned self] uuids in
+            for uuid in uuids {
+                if book.uuid == uuid {
+                    self.isFavorite = true
+                    return
+                }
+            }
+        }
     }
     
     private func makeImageURL(_ imageCode: String) -> URL? {

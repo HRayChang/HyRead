@@ -33,6 +33,20 @@ class CoreDataViewModel: ObservableObject {
         }
     }
     
+    func fetchIsFavorite(completion: @escaping ([Int]) -> Void) {
+        let request = NSFetchRequest<Entity>(entityName: "Entity")
+        request.predicate = NSPredicate(format: "isFavorite == true")
+        
+        do {
+            let result = try container.viewContext.fetch(request)
+            let favoriteUUIDs = result.compactMap { Int($0.uuid) }
+            completion(favoriteUUIDs)
+        } catch let error {
+            print("Error fetching favorite UUIDs. \(error)")
+            completion([])
+        }
+    }
+    
     func addOrUpdateCoreDataBooks(book: Book) {
         fetchCoreDataBooks { [weak self] entities in
             guard let self = self else { return }
