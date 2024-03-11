@@ -25,14 +25,12 @@ public class APIManager {
         
         URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
             
-            if error == nil,
-                let data = dataResponse,
+            if let data = dataResponse, error == nil,
                 let resultData = try? JSONDecoder().decode(Books.self, from: data) {
                 completionHandler(.success(resultData))
             } else {
                 completionHandler(.failure(.canNotParseData))
             }
-        }
-        .resume()
+        }.resume()
     }
 }

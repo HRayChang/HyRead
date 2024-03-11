@@ -19,15 +19,6 @@ class MainViewController: UIViewController {
     // Variables
     var cellDataSource: [BookCollectionCellViewModel] = []
     
-    let navigationRightButton = UIBarButtonItem(image: UIImage(systemName: "multiply"),
-                                           style: .done,
-                                           target: .none,
-                                           action: .none)
-    let navigationLeftButton = UIBarButtonItem(image: UIImage(systemName: "book.circle"),
-                                               style: .done,
-                                               target: .none,
-                                               action: .none)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,8 +33,18 @@ class MainViewController: UIViewController {
     
     func configView() {
         self.title = "我的書櫃"
-        self.navigationRightButton.tintColor = .label
-        self.navigationLeftButton.tintColor = .label
+        
+        let navigationRightButton = UIBarButtonItem(image: UIImage(systemName: "multiply"),
+                                                    style: .done,
+                                                    target: .none,
+                                                    action: .none)
+        
+        let navigationLeftButton = UIBarButtonItem(image: UIImage(systemName: "book.circle"),
+                                                   style: .done,
+                                                   target: self,
+                                                   action: #selector(leftButtonTapped))
+        navigationRightButton.tintColor = .label
+        navigationLeftButton.tintColor = .label
         self.navigationItem.rightBarButtonItem = navigationRightButton
         self.navigationItem.leftBarButtonItem = navigationLeftButton
         
@@ -71,5 +72,9 @@ class MainViewController: UIViewController {
             self.cellDataSource = books
             self.reloadCollectionView()
         }
+    }
+    
+    @objc func leftButtonTapped() {
+        navigationController?.pushViewController(FavoritiesViewController(), animated: true)
     }
 }

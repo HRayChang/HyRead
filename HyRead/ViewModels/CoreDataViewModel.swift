@@ -24,7 +24,6 @@ class CoreDataViewModel: ObservableObject {
     
     func fetchCoreDataBooks() {
         
-        print(NSPersistentContainer.defaultDirectoryURL())
         let request = NSFetchRequest<Entity>(entityName: "Entity")
         do {
             savedEntities = try container.viewContext.fetch(request)
@@ -34,10 +33,17 @@ class CoreDataViewModel: ObservableObject {
     }
     
     func addCoreDataBooks(book: Book) {
-        let newBook = Entity(context: container.viewContext)
-        newBook.title = book.title
-        newBook.coverURL = book.coverURL
-        saveCoreDataBooks()
+        
+        let bookEntity = Entity(context: container.viewContext)
+        bookEntity.uuid = Int16(book.uuid)
+        bookEntity.title = book.title
+        bookEntity.coverURL = book.coverURL
+        
+        getCoverImageData(urlString: book.coverURL) { imageData in
+            bookEntity.coverImage = imageData
+            self.saveCoreDataBooks()
+        }
+        
     }
     
     func saveCoreDataBooks() {
@@ -54,9 +60,22 @@ class CoreDataViewModel: ObservableObject {
         
         do {
             try container.persistentStoreCoordinator.execute(deleteRequest, with: container.viewContext)
-//            savedEntities.removeAll()
         } catch let error {
             print("Error clearing core data. \(error)")
+        }
+    }
+    
+    private func getCoverImageData(urlString: String, completion: @escaping (Data?) -> Void) {
+            
+        guard let url = URL(string: urlString) else { return }
+        
+        ImageManager.getImage(from: url) { image in
+            if let image = image {
+                let pngImageData = image.pngData()
+                completion(pngImageData)
+            } else {
+                completion(nil)
+            }
         }
     }
 }

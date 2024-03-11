@@ -13,6 +13,10 @@
 		7383FCE62B9CC0C100882087 /* BookCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCE52B9CC0C100882087 /* BookCollectionCellViewModel.swift */; };
 		7383FCE92B9CC4E700882087 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7383FCE82B9CC4E700882087 /* SDWebImage */; };
 		7383FCEB2B9DC76C00882087 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCEA2B9DC76C00882087 /* CoreDataViewModel.swift */; };
+		7383FCF22B9E2C5A00882087 /* FavoritiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7383FCF02B9E2C5A00882087 /* FavoritiesViewController.xib */; };
+		7383FCFD2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCFC2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift */; };
+		7383FCFF2B9E381200882087 /* FavoritiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCFE2B9E381200882087 /* FavoritiesViewController.swift */; };
+		7383FD012B9EDC6200882087 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FD002B9EDC6200882087 /* ImageManager.swift */; };
 		73A30F9C2B9C1D55007F00E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */; };
 		73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A30FA42B9C1D55007F00E1 /* HyRead.xcdatamodeld */; };
 		73A30FA82B9C1D57007F00E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A30FA72B9C1D57007F00E1 /* Assets.xcassets */; };
@@ -33,6 +37,10 @@
 		7383FCE32B9CBFAC00882087 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		7383FCE52B9CC0C100882087 /* BookCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		7383FCEA2B9DC76C00882087 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
+		7383FCF02B9E2C5A00882087 /* FavoritiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritiesViewController.xib; sourceTree = "<group>"; };
+		7383FCFC2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritiesViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		7383FCFE2B9E381200882087 /* FavoritiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritiesViewController.swift; sourceTree = "<group>"; };
+		7383FD002B9EDC6200882087 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		73A30F982B9C1D55007F00E1 /* HyRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A30F9B2B9C1D55007F00E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73A30FA52B9C1D55007F00E1 /* HyRead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HyRead.xcdatamodel; sourceTree = "<group>"; };
@@ -76,6 +84,16 @@
 				7383FCDC2B9CB53000882087 /* BookCollectionViewCell.xib */,
 			);
 			path = BookCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		7383FCEE2B9E2BF300882087 /* FavoritiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7383FCFE2B9E381200882087 /* FavoritiesViewController.swift */,
+				7383FCF02B9E2C5A00882087 /* FavoritiesViewController.xib */,
+				7383FCFC2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift */,
+			);
+			path = FavoritiesViewController;
 			sourceTree = "<group>";
 		};
 		73A30F8F2B9C1D54007F00E1 = {
@@ -143,6 +161,7 @@
 		73A30FB92B9C2D0E007F00E1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7383FCEE2B9E2BF300882087 /* FavoritiesViewController */,
 				73A30FB22B9C237D007F00E1 /* MainViewController */,
 			);
 			path = Controllers;
@@ -178,6 +197,7 @@
 			children = (
 				73A30FC52B9C40CD007F00E1 /* NetworkConstant.swift */,
 				73A30FC72B9C427B007F00E1 /* APIManager.swift */,
+				7383FD002B9EDC6200882087 /* ImageManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -247,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73A30FAB2B9C1D57007F00E1 /* LaunchScreen.storyboard in Resources */,
+				7383FCF22B9E2C5A00882087 /* FavoritiesViewController.xib in Resources */,
 				7383FCDE2B9CB53000882087 /* BookCollectionViewCell.xib in Resources */,
 				73A30FB62B9C23ED007F00E1 /* MainViewController.xib in Resources */,
 				73A30FA82B9C1D57007F00E1 /* Assets.xcassets in Resources */,
@@ -264,11 +285,14 @@
 				73A30FC42B9C39A9007F00E1 /* MainViewModel.swift in Sources */,
 				73A30FC22B9C3328007F00E1 /* MainViewController+CollectionView.swift in Sources */,
 				73A30FCA2B9C42EC007F00E1 /* BooksModel.swift in Sources */,
+				7383FCFF2B9E381200882087 /* FavoritiesViewController.swift in Sources */,
+				7383FCFD2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift in Sources */,
 				7383FCE22B9CBBBF00882087 /* BookCollectionViewCell.swift in Sources */,
 				7383FCE62B9CC0C100882087 /* BookCollectionCellViewModel.swift in Sources */,
 				73A30FC02B9C30F1007F00E1 /* MainViewController.swift in Sources */,
 				73A30FCC2B9C5021007F00E1 /* Observable.swift in Sources */,
 				73A30FC82B9C427B007F00E1 /* APIManager.swift in Sources */,
+				7383FD012B9EDC6200882087 /* ImageManager.swift in Sources */,
 				73A30FA62B9C1D55007F00E1 /* HyRead.xcdatamodeld in Sources */,
 				7383FCEB2B9DC76C00882087 /* CoreDataViewModel.swift in Sources */,
 				73A30FC62B9C40CD007F00E1 /* NetworkConstant.swift in Sources */,
