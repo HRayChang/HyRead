@@ -47,9 +47,8 @@ class MainViewModel {
                 case .success(let data):
                     
                     guard !data.isEmpty else { return }
-                    self?.coreDataViewModel.clearCoreDataBooks()
                     for book in data {
-                        self?.coreDataViewModel.addCoreDataBooks(book: book)
+                        self?.coreDataViewModel.addOrUpdateCoreDataBooks(book: book)
                     }
                     self?.dataSource = data
                     self?.mapCellData()

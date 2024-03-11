@@ -43,7 +43,8 @@ class BookCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        viewModel?.toggleFavorite()
+        guard let viewModel = viewModel else { return }
+        viewModel.toggleFavorite(book: viewModel)
         updateFavoriteButtonImage()
     }
     

@@ -9,13 +9,17 @@ import Foundation
 import UIKit
 
 class BookCollectionCellViewModel {
+    
+    let coreDataViewModel = CoreDataViewModel()
+    
     let uuid: Int
     let title: String
     var coverURL: URL? = URL(string: "")
-    var isFavorite: Bool = false
+    var isFavorite: Bool
     
     init(book: Book) {
         self.uuid = book.uuid
+        self.isFavorite = book.isFavorite ?? false
         self.title = book.title
         self.coverURL = makeImageURL(book.coverURL)
     }
@@ -24,8 +28,10 @@ class BookCollectionCellViewModel {
         URL(string: "\(imageCode)")
     }
     
-    func toggleFavorite() {
+    func toggleFavorite(book: BookCollectionCellViewModel) {
         isFavorite.toggle()
+        let book = Book(uuid: book.uuid, title: book.title, coverURL: book.coverURL?.absoluteString ?? "", coverImage: nil, isFavorite: isFavorite, publishDate: "", publisher: "", author: "")
+        coreDataViewModel.updateFavoriteStatus(forUUID: book.uuid, newFavoriteStatus: isFavorite)
     }
     
     var favoriteButtonImage: UIImage? {

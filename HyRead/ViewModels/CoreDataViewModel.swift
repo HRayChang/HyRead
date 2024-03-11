@@ -33,19 +33,41 @@ class CoreDataViewModel: ObservableObject {
         }
     }
     
-    func addCoreDataBooks(book: Book) {
-        
-        let bookEntity = Entity(context: container.viewContext)
-        bookEntity.uuid = Int16(book.uuid)
-        bookEntity.title = book.title
-        bookEntity.coverURL = book.coverURL
-        bookEntity.isFavorite = book.isFavorite ?? false
-        
-        getCoverImageData(urlString: book.coverURL) { imageData in
-            bookEntity.coverImage = imageData
+    func addOrUpdateCoreDataBooks(book: Book) {
+        fetchCoreDataBooks { [weak self] entities in
+            guard let self = self else { return }
+
+            let existingEntity = entities.first(where: { $0.uuid == Int16(book.uuid) })
+
+            if let existingEntity = existingEntity {
+                // Update existing book
+                existingEntity.title = book.title
+            } else {
+                // Add new book
+                let newEntity = Entity(context: self.container.viewContext)
+                newEntity.uuid = Int16(book.uuid)
+                newEntity.title = book.title
+                newEntity.coverURL = book.coverURL
+                newEntity.isFavorite = book.isFavorite ?? false
+                
+                self.getCoverImageData(urlString: book.coverURL) { imageData in
+                    newEntity.coverImage = imageData
+                    self.saveCoreDataBooks()
+                }
+            }
+        }
+    }
+    
+    func updateFavoriteStatus(forUUID uuid: Int, newFavoriteStatus: Bool) {
+        fetchCoreDataBooks { [weak self] entities in
+            guard let self = self else { return }
+            
+            for entity in entities where entity.uuid == Int16(uuid) {
+                entity.isFavorite = newFavoriteStatus
+            }
+            
             self.saveCoreDataBooks()
         }
-        
     }
     
     func saveCoreDataBooks() {
@@ -56,16 +78,16 @@ class CoreDataViewModel: ObservableObject {
         }
     }
     
-    func clearCoreDataBooks() {
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Entity")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        
-        do {
-            try container.persistentStoreCoordinator.execute(deleteRequest, with: container.viewContext)
-        } catch let error {
-            print("Error clearing core data. \(error)")
-        }
-    }
+//    func clearCoreDataBooks() {
+//        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Entity")
+//        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+//        
+//        do {
+//            try container.persistentStoreCoordinator.execute(deleteRequest, with: container.viewContext)
+//        } catch let error {
+//            print("Error clearing core data. \(error)")
+//        }
+//    }
     
     private func getCoverImageData(urlString: String, completion: @escaping (Data?) -> Void) {
             
