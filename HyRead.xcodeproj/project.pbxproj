@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7381726F2B9F63CC00D80C32 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381726D2B9F63CC00D80C32 /* DetailViewController.swift */; };
+		738172702B9F63CC00D80C32 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7381726E2B9F63CC00D80C32 /* DetailViewController.xib */; };
+		738172722B9F66F000D80C32 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738172712B9F66F000D80C32 /* DetailViewModel.swift */; };
 		7383FCDE2B9CB53000882087 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7383FCDC2B9CB53000882087 /* BookCollectionViewCell.xib */; };
 		7383FCE22B9CBBBF00882087 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCE12B9CBBBF00882087 /* BookCollectionViewCell.swift */; };
 		7383FCE42B9CBFAC00882087 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383FCE32B9CBFAC00882087 /* UIViewExtensions.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7381726D2B9F63CC00D80C32 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7381726E2B9F63CC00D80C32 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		738172712B9F66F000D80C32 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		7383FCDC2B9CB53000882087 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
 		7383FCE12B9CBBBF00882087 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		7383FCE32B9CBFAC00882087 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -71,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7381726C2B9F639400D80C32 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7381726D2B9F63CC00D80C32 /* DetailViewController.swift */,
+				7381726E2B9F63CC00D80C32 /* DetailViewController.xib */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
 		7383FCD52B9C977B00882087 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +171,7 @@
 				73A30FC32B9C39A9007F00E1 /* MainViewModel.swift */,
 				7383FCE52B9CC0C100882087 /* BookCollectionCellViewModel.swift */,
 				7383FCEA2B9DC76C00882087 /* CoreDataViewModel.swift */,
+				738172712B9F66F000D80C32 /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -163,6 +179,7 @@
 		73A30FB92B9C2D0E007F00E1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7381726C2B9F639400D80C32 /* DetailViewController */,
 				7383FCEE2B9E2BF300882087 /* FavoritiesViewController */,
 				73A30FB22B9C237D007F00E1 /* MainViewController */,
 			);
@@ -270,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73A30FAB2B9C1D57007F00E1 /* LaunchScreen.storyboard in Resources */,
+				738172702B9F63CC00D80C32 /* DetailViewController.xib in Resources */,
 				7383FCF22B9E2C5A00882087 /* FavoritiesViewController.xib in Resources */,
 				7383FCDE2B9CB53000882087 /* BookCollectionViewCell.xib in Resources */,
 				73A30FB62B9C23ED007F00E1 /* MainViewController.xib in Resources */,
@@ -291,8 +309,10 @@
 				7383FCFF2B9E381200882087 /* FavoritiesViewController.swift in Sources */,
 				7383FD032B9EE8F300882087 /* NetworkChecker.swift in Sources */,
 				7383FCFD2B9E359B00882087 /* FavoritiesViewController+CollectionView.swift in Sources */,
+				738172722B9F66F000D80C32 /* DetailViewModel.swift in Sources */,
 				7383FCE22B9CBBBF00882087 /* BookCollectionViewCell.swift in Sources */,
 				7383FCE62B9CC0C100882087 /* BookCollectionCellViewModel.swift in Sources */,
+				7381726F2B9F63CC00D80C32 /* DetailViewController.swift in Sources */,
 				73A30FC02B9C30F1007F00E1 /* MainViewController.swift in Sources */,
 				73A30FCC2B9C5021007F00E1 /* Observable.swift in Sources */,
 				73A30FC82B9C427B007F00E1 /* APIManager.swift in Sources */,
