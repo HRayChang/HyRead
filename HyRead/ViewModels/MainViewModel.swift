@@ -42,12 +42,14 @@ class MainViewModel {
         isLoading.value = true
         
         if NetworkChecker.isConnectedToNetwork() {
+            // Get data from network
             APIManager.getMyLibrary { [weak self] result in
                 switch result {
                 case .success(let data):
                     
                     guard !data.isEmpty else { return }
                     for book in data {
+                        // Add or update book to core data
                         self?.coreDataViewModel.addOrUpdateCoreDataBooks(book: book)
                     }
                     self?.dataSource = data
@@ -59,6 +61,7 @@ class MainViewModel {
                 self?.isLoading.value = false
             }
         } else {
+            // Get data drom core data
             coreDataViewModel.fetchCoreDataBooks { entities in
                 guard !entities.isEmpty else { return }
                 var savedBooks: Books = []
@@ -76,9 +79,5 @@ class MainViewModel {
     
     func mapCellData() {
         self.cellDataSource.value = self.dataSource?.compactMap({BookCollectionCellViewModel(book: $0)})
-    }
-    
-    func getBookTitle(_ book: Book) -> String {
-        return book.title
     }
 }

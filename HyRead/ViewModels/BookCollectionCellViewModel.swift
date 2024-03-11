@@ -27,7 +27,6 @@ class BookCollectionCellViewModel {
             for uuid in uuids {
                 if book.uuid == uuid {
                     self.isFavorite = true
-                    return
                 }
             }
         }
@@ -39,7 +38,6 @@ class BookCollectionCellViewModel {
     
     func toggleFavorite(book: BookCollectionCellViewModel) {
         isFavorite.toggle()
-        let book = Book(uuid: book.uuid, title: book.title, coverURL: book.coverURL?.absoluteString ?? "", coverImage: nil, isFavorite: isFavorite, publishDate: "", publisher: "", author: "")
         coreDataViewModel.updateFavoriteStatus(forUUID: book.uuid, newFavoriteStatus: isFavorite)
     }
     
