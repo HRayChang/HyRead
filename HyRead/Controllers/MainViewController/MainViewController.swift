@@ -35,14 +35,8 @@ class MainViewController: UIViewController {
                                                     style: .done,
                                                     target: .none,
                                                     action: .none)
-        
-        let navigationLeftButton = UIBarButtonItem(image: UIImage(systemName: "book.circle"),
-                                                   style: .done,
-                                                   target: self,
-                                                   action: #selector(leftButtonTapped))
         navigationController?.navigationBar.tintColor = .label
         self.navigationItem.rightBarButtonItem = navigationRightButton
-        self.navigationItem.leftBarButtonItem = navigationLeftButton
         
         setupCollectionView()
     }
@@ -68,10 +62,6 @@ class MainViewController: UIViewController {
             self.cellDataSource = books
             self.reloadCollectionView()
         }
-    }
-    
-    @objc func leftButtonTapped() {
-        navigationController?.pushViewController(FavoritiesViewController(), animated: true)
     }
     
     func openDetail(uuid: Int) {
