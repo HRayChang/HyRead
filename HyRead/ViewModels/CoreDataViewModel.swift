@@ -66,9 +66,10 @@ class CoreDataViewModel: ObservableObject {
                 
                 self.getCoverImageData(urlString: book.coverURL) { imageData in
                     newEntity.coverImage = imageData
-                    self.saveCoreDataBooks()
+                    
                 }
             }
+            saveCoreDataBooks()
         }
     }
     
@@ -80,7 +81,7 @@ class CoreDataViewModel: ObservableObject {
                 entity.isFavorite = newFavoriteStatus
             }
             
-            self.saveCoreDataBooks()
+            saveCoreDataBooks()
         }
     }
     

@@ -78,7 +78,9 @@ class MainViewModel {
     }
     
     func mapCellData() {
-        self.cellDataSource.value = self.dataSource?.compactMap({BookCollectionCellViewModel(book: $0)})
+        self.cellDataSource.value = self.dataSource?.compactMap({ book in
+            return BookCollectionCellViewModel(book: book)
+        })
     }
     
     func retriveBook(with uuid: Int) -> Book? {
