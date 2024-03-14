@@ -28,6 +28,11 @@ class MainViewController: UIViewController {
         bindViewModel()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.reloadData()
+    }
+    
     func configView() {
         self.title = "我的書櫃"
         
@@ -35,8 +40,13 @@ class MainViewController: UIViewController {
                                                     style: .done,
                                                     target: .none,
                                                     action: .none)
+        let navigationLeftButton = UIBarButtonItem(image: UIImage(systemName: "multiply"),
+                                                   style: .done,
+                                                   target: self,
+                                                   action: #selector(myFavorityTapped))
         navigationController?.navigationBar.tintColor = .label
         self.navigationItem.rightBarButtonItem = navigationRightButton
+        self.navigationItem.leftBarButtonItem = navigationLeftButton
         
         setupCollectionView()
     }
@@ -73,5 +83,17 @@ class MainViewController: UIViewController {
         DispatchQueue.main.async {
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }
+    }
+    
+    @objc func myFavorityTapped() {
+        let data = viewModel.filterFavoriteBooks(books: cellDataSource)
+        
+        let favoritiesViewModel = FavoritiesViewModel(books: data)
+        let favoritiesViewController = FavoritiesViewController(viewModel: favoritiesViewModel)
+        
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(favoritiesViewController, animated: true)
+        }
+        
     }
 }

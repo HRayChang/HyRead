@@ -89,4 +89,14 @@ class MainViewModel {
         }
         return book
     }
+    
+    func filterFavoriteBooks(books: [BookCollectionCellViewModel]) -> [BookCollectionCellViewModel] {
+        var favoriteBooks: [BookCollectionCellViewModel] = []
+        for book in books {
+            if book.isFavorite {
+                favoriteBooks.append(book)
+            }
+        }
+        return favoriteBooks
+    }
 }

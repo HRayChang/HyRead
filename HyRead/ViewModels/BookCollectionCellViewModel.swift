@@ -27,9 +27,7 @@ class BookCollectionCellViewModel {
             for uuid in uuids {
                 if book.uuid == uuid {
                     self.isFavorite = true
-                } else {
-                    self.isFavorite = false
-                }
+                } 
             }
         }
     }
