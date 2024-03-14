@@ -28,8 +28,8 @@ class MainViewController: UIViewController {
         bindViewModel()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         collectionView.reloadData()
     }
     
@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
                                                     style: .done,
                                                     target: .none,
                                                     action: .none)
-        let navigationLeftButton = UIBarButtonItem(image: UIImage(systemName: "multiply"),
+        let navigationLeftButton = UIBarButtonItem(image: UIImage(systemName: "books.vertical.circle"),
                                                    style: .done,
                                                    target: self,
                                                    action: #selector(myFavorityTapped))
